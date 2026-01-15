@@ -1,94 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Web Site Brand</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web Site Brand - Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+  <body>
+    <div class="wrapper">
+      <header>
+        <img src="images/central_park.jpg" alt="Central Park in winter" />
+        <h1 class="brand">My Web Site Brand</h1>
+      </header>
 
-    header {
-      background: url("images/central_park.jpg") center -200px no-repeat;
-      background-size: cover;
-      height: 400px;
-      color: white;
-      font-size: 36px;
-      font-weight: bold;
-      padding: 100px 0 0 100px;
-    }
+      <nav>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="page2.html">About</a></li>
+          <li><span class="nav-disabled">Gallery</span></li>
+          <li><a href="page3.html">Contact</a></li>
+        </ul>
+      </nav>
 
-    nav {
-      background-color: rgb(255, 245, 238);
-      height: 50px;
-      text-align: center;
-      padding-top: 15px;
-    }
+      <main>
+        <h1>My First Heading</h1>
+        <p>My First paragraph.</p>
+      </main>
 
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav li {
-      display: inline;
-      margin: 0 15px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: rgb(129, 141, 179);
-    }
-
-    main {
-      padding: 20px;
-      height: 300px;
-    }
-
-    main h1 {
-      color: rgb(129, 141, 179);
-    }
-
-    footer {
-      background-color: rgb(129, 141, 179);
-      color: white;
-      text-align: center;
-      height: 50px;
-      padding-top: 15px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    My Web Site Brand
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="page2.html">About</a></li>
-      <li><a href="page3.html">Gallery</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <h1>Welcome</h1>
-    <p>This is the home page of my website.</p>
-  </main>
-
-  <footer>
-    © Copyright 2020
-  </footer>
-
-</body>
+      <footer>© Copyright 2020</footer>
+    </div>
+  </body>
 </html>

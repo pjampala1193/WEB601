@@ -1,0 +1,161 @@
+/* Reset-ish */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+}
+
+/* Center the whole page like the slides */
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* Hero image + brand text */
+header {
+  position: relative;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.brand {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  margin: 0;
+  color: #ffffff;
+  font-size: 64px;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* Nav bar */
+nav {
+  background-color: rgb(255, 245, 238);
+  height: 50px;
+  text-align: center;
+  padding-top: 14px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 28px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(129, 141, 179);
+  font-size: 16px;
+}
+
+nav a.active {
+  color: #000;
+  font-weight: 700;
+}
+
+/* Gallery should show but NOT be clickable */
+nav .nav-disabled {
+  color: rgb(129, 141, 179);
+  font-size: 16px;
+  cursor: default;
+}
+
+nav .nav-disabled.active {
+  color: #000;
+  font-weight: 700;
+}
+
+/* Main content (IMPORTANT: no fixed height) */
+main {
+  margin: 50px;
+}
+
+/* Headings like the slides */
+main h1 {
+  color: rgb(129, 141, 179);
+  font-size: 64px;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+/* Tables like the slides */
+table {
+  margin-top: 35px;
+  border-collapse: collapse;
+}
+
+table,
+caption,
+th,
+td {
+  border: 1px solid #000;
+}
+
+th,
+td {
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  padding: 6px 10px;
+}
+
+caption {
+  text-transform: uppercase;
+  font-weight: 600;
+  height: 40px;
+  padding-top: 15px;
+  color: #753a30;
+}
+
+/* Form styles (Contact) */
+fieldset {
+  margin-top: 15px;
+}
+
+label {
+  display: block;
+  margin: 15px 0 0 0;
+}
+
+input {
+  width: 300px;
+}
+
+input[type="radio"] {
+  width: 25px;
+}
+
+textarea {
+  width: 300px;
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 20px 0 10px 0;
+  width: 100px;
+  text-transform: capitalize;
+  padding: 10px;
+}
+
+/* Footer like the slides */
+footer {
+  height: 80px;
+  background-color: rgb(129, 141, 179);
+  text-align: center;
+  padding: 30px 0;
+  color: #ffffff;
+}

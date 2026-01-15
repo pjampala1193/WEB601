@@ -1,91 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Gallery</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web Site Brand - Contact</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+  <body>
+    <div class="wrapper">
+      <header>
+        <img src="images/central_park.jpg" alt="Central Park in winter" />
+        <h1 class="brand">My Web Site Brand</h1>
+      </header>
 
-    header {
-      background: url("images/central_park.jpg") center center no-repeat;
-      background-size: cover;
-      height: 300px;
-      color: white;
-      font-size: 32px;
-      font-weight: bold;
-      padding: 80px 0 0 100px;
-    }
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page2.html">About</a></li>
+          <li><span class="nav-disabled">Gallery</span></li>
+          <li><a class="active" href="page3.html">Contact</a></li>
+        </ul>
+      </nav>
 
-    nav {
-      background-color: rgb(255, 245, 238);
-      height: 50px;
-      text-align: center;
-      padding-top: 15px;
-    }
+      <main>
+        <h1>My Third Heading</h1>
+        <p>My Third paragraph.</p>
 
-    nav ul {
-      list-style-type: none;
-    }
+        <form action="#" method="post">
+          <fieldset>
+            <legend>User personal information</legend>
 
-    nav li {
-      display: inline;
-      margin: 0 15px;
-    }
+            <label for="fullname">Enter your full name</label>
+            <input type="text" id="fullname" name="fullname" />
 
-    nav a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
+            <label for="email">Enter your email</label>
+            <input type="email" id="email" name="email" />
 
-    nav a:hover {
-      color: rgb(129, 141, 179);
-    }
+            <label for="phone">Enter your phone</label>
+            <input type="tel" id="phone" name="phone" />
 
-    main {
-      padding: 20px;
-    }
+            <label>Select your gender</label>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male" style="display: inline;">Male</label>
 
-    main h1 {
-      color: rgb(129, 141, 179);
-    }
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female" style="display: inline;">Female</label>
 
-    footer {
-      background-color: rgb(129, 141, 179);
-      color: white;
-      text-align: center;
-      height: 50px;
-      padding-top: 15px;
-    }
-  </style>
-</head>
+            <label for="contact-method">How should we contact you?</label>
+            <select id="contact-method" name="contact-method">
+              <option value="email">Email</option>
+              <option value="phone">Phone</option>
+            </select>
 
-<body>
+            <label for="reason">Tell us the reason of your visit today:</label>
+            <textarea id="reason" name="reason" rows="6"></textarea>
 
-  <header>
-    Gallery
-  </header>
+            <input type="submit" value="Sign-Up" />
+          </fieldset>
+        </form>
+      </main>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="page2.html">About</a></li>
-      <li><a href="page3.html">Gallery</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <h1>Image Gallery</h1>
-    <p>Photos will be added here.</p>
-  </main>
-
-  <footer>
-    © Copyright 2020
-  </footer>
-
-</body>
+      <footer>© Copyright 2020</footer>
+    </div>
+  </body>
 </html>

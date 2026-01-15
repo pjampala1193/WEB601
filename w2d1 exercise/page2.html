@@ -1,91 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>About</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web Site Brand - About</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+  <body>
+    <div class="wrapper">
+      <header>
+        <img src="images/central_park.jpg" alt="Central Park in winter" />
+        <h1 class="brand">My Web Site Brand</h1>
+      </header>
 
-    header {
-      background: url("images/east-village.jpg") center center no-repeat;
-      background-size: cover;
-      height: 300px;
-      color: white;
-      font-size: 32px;
-      font-weight: bold;
-      padding: 80px 0 0 100px;
-    }
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="page2.html">About</a></li>
+          <li><span class="nav-disabled">Gallery</span></li>
+          <li><a href="page3.html">Contact</a></li>
+        </ul>
+      </nav>
 
-    nav {
-      background-color: rgb(255, 245, 238);
-      height: 50px;
-      text-align: center;
-      padding-top: 15px;
-    }
+      <main>
+        <h1>My Second Heading</h1>
+        <p>My Second paragraph.</p>
 
-    nav ul {
-      list-style-type: none;
-    }
+        <table>
+          <caption>
+            Calories Comparison of Popular Burgers
+          </caption>
+          <tr>
+            <th>Type</th>
+            <th>Big Mac</th>
+            <th>Whopper</th>
+            <th>Dave's Double</th>
+            <th>Whataburger</th>
+          </tr>
+          <tr>
+            <td>Calories</td>
+            <td>563</td>
+            <td>677</td>
+            <td>870</td>
+            <td>590</td>
+          </tr>
+          <tr>
+            <td>Fat</td>
+            <td>30gm</td>
+            <td>40gm</td>
+            <td>51gm</td>
+            <td>25gm</td>
+          </tr>
+          <tr>
+            <td>Vendor</td>
+            <td>MacD</td>
+            <td>Burger King</td>
+            <td>Wendys</td>
+            <td>Whataburger</td>
+          </tr>
+        </table>
+      </main>
 
-    nav li {
-      display: inline;
-      margin: 0 15px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: rgb(129, 141, 179);
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    main h1 {
-      color: rgb(129, 141, 179);
-    }
-
-    footer {
-      background-color: rgb(129, 141, 179);
-      color: white;
-      text-align: center;
-      height: 50px;
-      padding-top: 15px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    About Us
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="page2.html">About</a></li>
-      <li><a href="page3.html">Gallery</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <h1>About This Site</h1>
-    <p>This page gives information about the website.</p>
-  </main>
-
-  <footer>
-    © Copyright 2020
-  </footer>
-
-</body>
+      <footer>© Copyright 2020</footer>
+    </div>
+  </body>
 </html>
