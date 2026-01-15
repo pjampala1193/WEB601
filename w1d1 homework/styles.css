@@ -1,0 +1,363 @@
+/* =========================
+   Global
+========================= */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+}
+
+/* =========================
+   Header backgrounds by page (body id)
+========================= */
+header {
+  width: 100%;
+  min-height: 400px;
+  padding-top: 3em;
+}
+
+#home header {
+  background: no-repeat lightgrey url("images/cliff_ocean.jpg");
+  background-size: 1500px;
+}
+
+#activities header {
+  background: no-repeat lightgrey url("images/runfly.jpg");
+  background-size: 1500px;
+}
+
+#contact header {
+  /* Using YOUR filename from the screenshot: Cliff_rock.jpg */
+  background: no-repeat lightgrey url("images/Cliff_rock.jpg");
+  background-size: 1500px;
+}
+
+/* If you rename Cliff_rock.jpg -> cliff_rock.jpg, use this instead:
+#contact header {
+  background: no-repeat lightgrey url("images/cliff_rock.jpg");
+  background-size: 1500px;
+}
+*/
+
+/* =========================
+   Logo + Nav container
+========================= */
+.main-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 700px;
+  margin: 2em auto 0 auto;
+  height: 100px;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 2em;
+}
+
+/* =========================
+   Navigation
+========================= */
+.main-menu {
+  margin-left: 227px;
+  font-weight: 400;
+}
+
+.main-menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu ul li {
+  list-style-type: none;
+  display: inline-block;
+  float: left;
+  padding: 0 25px;
+  border-left: 1px solid rgba(202, 204, 202, 0.6);
+  line-height: 100px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.main-menu ul li a {
+  text-decoration: none;
+  color: #888;
+}
+
+.main-menu ul li a:hover {
+  color: #9ed034;
+}
+
+.main-menu ul li.active {
+  background: #9ed034;
+  border: none;
+}
+
+.main-menu ul li.active a {
+  color: #fff;
+}
+
+/* =========================
+   Main content
+========================= */
+main {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+main h1 {
+  font-size: 28px;
+  color: #9ed034;
+  margin: 0 0 0.75em 0;
+  font-weight: 700;
+}
+
+main h2 {
+  font-size: 18px;
+  color: #000;
+  margin: 1.5em 0 0.5em 0;
+  font-weight: 700;
+}
+
+main p {
+  color: #333;
+  line-height: 1.6;
+  margin: 0 0 1em 0;
+  max-width: 900px;
+}
+
+/* =========================
+   Partners
+========================= */
+section {
+  width: 100%;
+  background-color: #4288C3;
+}
+
+#partners {
+  width: 1200px;
+  padding: 2em 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#partners .partner {
+  display: inline-block;
+  margin: 0 0.75em;
+  padding: 1.3em 1.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+#partners .partner img {
+  width: 90px;
+  height: 90px;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  width: 100%;
+  height: 155px;
+  padding-bottom: 1em;
+  background-color: #fcefab;
+  position: relative;
+}
+
+#nondisclaimer {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 1em;
+}
+
+#copyright {
+  float: left;
+  font-size: 14px;
+  color: #444;
+}
+
+#social {
+  float: right;
+}
+
+#disclaimer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  padding-bottom: 0.75em;
+}
+
+/* Social icons */
+.fa {
+  padding: 14px;
+  font-size: 18px;
+  width: 46px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 6px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.fa:hover { opacity: 0.7; }
+
+.fa-facebook { background: #3B5998; }
+.fa-twitter { background: #55ACEE; }
+.fa-instagram { background: #125688; }
+
+/* =========================
+   ACTIVITIES: Table styling (Day 2)
+========================= */
+#activities table {
+  width: 1000px;
+  margin: 4em auto 0 auto;
+  border-collapse: collapse;
+}
+
+#activities caption {
+  background: #852b1b;
+  height: 40px;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding-top: 1em;
+}
+
+#activities thead {
+  background: #BDE1FF;
+}
+
+#activities tbody {
+  background: #E8FFEE;
+  text-align: center;
+}
+
+#activities th,
+#activities td {
+  width: 225px;
+  height: 75px;
+  vertical-align: middle;
+  border: solid 1px #852b1b;
+  padding: 6px;
+}
+
+/* First column (sub-headings) */
+#activities th:first-child {
+  width: 125px;
+  background: #4977D1;
+  color: #fff;
+}
+
+#activities td:first-child {
+  font-weight: bold;
+  background: #BDE1FF;
+}
+
+/* =========================
+   CONTACT: styling (Day 2)
+========================= */
+#contact .contactinfo {
+  margin: 1em 0 1.5em 0;
+}
+
+#contact .contactinfo .phone,
+#contact .contactinfo .email {
+  margin: 0.4em 0;
+}
+
+#contact .contactinfo span:first-child {
+  font-weight: bold;
+  color: #4977D1;
+  display: inline-block;
+  width: 70px;
+}
+
+/* Form layout */
+#contact form {
+  width: 700px;
+  margin: 1.5em auto 0 auto;
+}
+
+#contact fieldset {
+  border: 2px solid #9ed034;
+  padding: 1.5em;
+}
+
+#contact legend {
+  color: #4977D1;
+  font-weight: bold;
+  padding: 0 0.5em;
+}
+
+#contact .textbox label,
+#contact .selectmenu label,
+#contact .commentbox label,
+#contact .radios label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  color: #4977D1;
+}
+
+#contact .textbox input[type="text"],
+#contact .textbox input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+}
+
+#contact .radios {
+  margin-top: 12px;
+}
+
+#contact .radios input {
+  margin-left: 10px;
+  margin-right: 4px;
+}
+
+#contact .selectmenu select {
+  margin-top: 6px;
+  padding: 8px;
+  width: 250px;
+  border: 1px solid #ccc;
+}
+
+#contact .commentbox textarea {
+  width: 100%;
+  height: 140px;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+#contact form .button {
+  text-align: center;
+  margin-top: 18px;
+}
+
+#contact form .button input[type="submit"] {
+  width: 200px;
+  padding: 12px 18px;
+  border: none;
+  background: #4977D1;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#contact form .button input[type="submit"]:hover {
+  opacity: 0.9;
+}
