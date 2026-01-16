@@ -28,7 +28,7 @@ body{
               var(--bg);
 }
 
-/* A simple centered page width without needing HTML changes */
+
 body > *{
   max-width: 1100px;
   margin-left: auto;
@@ -76,7 +76,7 @@ li{ margin: 6px 0; }
 
 ul li::marker{ color: var(--brand); }
 
-/* Simple content sections look like cards without you adding classes */
+
 h2 + p,
 h2 + ul,
 h2 + ol{
@@ -85,4 +85,73 @@ h2 + ol{
   border-radius: var(--radius);
   padding: 14px 16px;
   box-shadow: var(--shadow);
+}
+
+/* -----------------------------
+   Links + Images (Commit 2)
+------------------------------*/
+
+/* Links */
+a{
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover{
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+a:focus{
+  outline: 3px solid rgba(109,40,217,.25);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+
+body > ul:first-of-type{
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  padding: 10px 12px;
+  margin: 8px 0 18px;
+  background: rgba(255,255,255,.85);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  width: fit-content;
+}
+
+body > ul:first-of-type li{
+  margin: 0;
+}
+
+body > ul:first-of-type a{
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+body > ul:first-of-type a:hover{
+  background: rgba(109,40,217,.10);
+  text-decoration: none;
+}
+
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img:not([width]):not([height]){
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+
+body img:first-of-type{
+  margin: 16px 0 18px;
 }
