@@ -155,3 +155,104 @@ img:not([width]):not([height]){
 body img:first-of-type{
   margin: 16px 0 18px;
 }
+
+/* -----------------------------
+   Tables + Forms (Commit 3)
+------------------------------*/
+
+/* Tables */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin: 16px 0 22px;
+}
+
+caption{
+  text-align: left;
+  font-weight: 800;
+  padding: 10px 12px;
+  color: var(--brand-dark);
+}
+
+th, td{
+  padding: 12px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th{
+  background: rgba(109,40,217,.08);
+  color: var(--brand-dark);
+  font-weight: 800;
+}
+
+tbody tr:nth-child(even){
+  background: rgba(0,0,0,.02);
+}
+
+tbody tr:hover{
+  background: rgba(109,40,217,.06);
+}
+
+/* Forms */
+form{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  margin: 16px 0 22px;
+  max-width: 720px;
+}
+
+label{
+  display: block;
+  font-weight: 700;
+  margin: 10px 0 6px;
+  color: var(--brand-dark);
+}
+
+input, select, textarea{
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font: inherit;
+  background: #fff;
+}
+
+textarea{ min-height: 110px; resize: vertical; }
+
+input:focus, select:focus, textarea:focus{
+  outline: 3px solid rgba(109,40,217,.20);
+  border-color: rgba(109,40,217,.50);
+}
+
+button, input[type="submit"]{
+  margin-top: 12px;
+  background: var(--brand);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+button:hover, input[type="submit"]:hover{
+  background: var(--brand-dark);
+}
+
+
+small{
+  display: block;
+  color: var(--muted);
+  margin-top: 6px;
+}
