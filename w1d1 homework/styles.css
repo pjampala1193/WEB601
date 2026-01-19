@@ -34,12 +34,13 @@ header {
   background-size: 1500px;
 }
 
-/* If you rename Cliff_rock.jpg -> cliff_rock.jpg, use this instead:
-#contact header {
-  background: no-repeat lightgrey url("images/cliff_rock.jpg");
+/* =========================
+   CLIFFS (Week 2 Day 3)
+========================= */
+#cliffs header {
+  background: no-repeat lightgrey url("images/forest_cliff.jpg");
   background-size: 1500px;
 }
-*/
 
 /* =========================
    Logo + Nav container
@@ -128,6 +129,34 @@ main p {
   line-height: 1.6;
   margin: 0 0 1em 0;
   max-width: 900px;
+}
+
+/* =========================
+   CLIFFS page layout (Week 2 Day 3)
+========================= */
+#cliffs .cliff-grid {
+  margin-top: 2em;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#cliffs .cliff-card {
+  background: #fff;
+  width: calc(25% - 15px);
+  padding: 1em;
+  text-align: center;
+}
+
+#cliffs .cliff-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#cliffs .cliff-card h2 {
+  margin: 0.75em 0 0.5em 0;
+  font-size: 16px;
 }
 
 /* =========================
