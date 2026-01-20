@@ -390,3 +390,22 @@ footer {
 #contact form .button input[type="submit"]:hover {
   opacity: 0.9;
 }
+
+/* ===== HOME (Digital Clock Bar) ===== */
+#timeofday {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 18px 10px;
+  background: linear-gradient(0deg, rgba(251,215,139,1) 0%, rgba(118,213,245,1) 100%);
+}
+
+#timeofday span {
+  color: #3a3a3a;
+  font-size: 14px;
+}
+
+#timeofday #clock {
+  color: #125688;
+  font-weight: bold;
+}
+
