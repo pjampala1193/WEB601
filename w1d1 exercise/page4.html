@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page 4</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="container">
+
+    <!-- Banner header (same as all other pages) -->
+    <header class="hero">
+      <h1 class="site-title">My Web Site Brand</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page2.html">Page 2</a></li>
+        <li><a href="page3.html">Page 3</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="page4.html">Page 4</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>My Fourth Heading</h1>
+      <p>My Fourth paragraph.</p>
+
+      <!-- JS will generate the <li> items -->
+      <ul id="album"></ul>
+    </main>
+
+    <footer>
+      &copy; Copyright 2020
+    </footer>
+
+  </div>
+
+  <!-- Gallery JavaScript -->
+  <script>
+    var photos = [];
+    var fileNames = [];
+    var imageList = [];
+    var image;
+
+    var openList = '<li id="photo">';
+    var closeList = "</li>";
+
+    for (var i = 0; i < 6; i++) {
+      fileNames.push("winterland" + (i + 1));
+      photos.push("<img src='images/" + fileNames[i] + ".jpg' />");
+      image = openList + photos[i] + closeList;
+      imageList.push(image);
+    }
+
+    document.getElementById("album").innerHTML = imageList.join("");
+  </script>
+</body>
+</html>
