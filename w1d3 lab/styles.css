@@ -279,3 +279,38 @@ small{
   border-radius: 10px;
   display: block;
 }
+
+/* 1) list */
+.gallery li {
+  position: relative; /* parent for absolute-positioned description */
+  text-align: center;
+}
+
+/* 2) caption */
+.caption {
+  margin: 10px 0 0;
+  font-weight: 700;
+}
+
+/* 3) description */
+.description {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 44px; /* sits above caption */
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  visibility: hidden;
+}
+
+/* 4) list when mouse over it */
+.gallery li:hover {
+  cursor: pointer;
+}
+
+/* 5) description when mouse over the list */
+.gallery li:hover .description {
+  visibility: visible;
+}
+
