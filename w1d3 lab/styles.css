@@ -314,3 +314,42 @@ small{
   visibility: visible;
 }
 
+/* ===== Week 4 Day 3: Floating Info Box ===== */
+.info-box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(520px, 90vw);
+  padding: 20px;
+  border-radius: 12px;
+  z-index: 9999;
+
+  /* dark overlay style like the sample */
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.info-box h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.4rem;
+}
+
+.info-box p {
+  margin: 0 0 14px 0;
+  line-height: 1.5;
+}
+
+.info-close {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  color: #f3d36b; /* warm yellow-ish like sample */
+}
+
+.info-close:hover {
+  text-decoration: underline;
+}

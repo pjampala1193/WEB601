@@ -23,6 +23,13 @@
       <h2>Gallery</h2>
       <p>Meet some of our adorable pets!</p>
 
+      <!-- Floating Info Box (starts hidden) -->
+      <div id="infoBox" class="info-box" style="visibility: hidden;">
+        <h3 id="infoHeading"></h3>
+        <p id="infoText"></p>
+        <a href="#" id="infoClose" class="info-close">Click This To Close</a>
+      </div>
+
       <!-- JS will generate the <li> items -->
       <ul id="gallery" class="gallery"></ul>
     </main>
@@ -31,79 +38,7 @@
       <p>&copy; 2026 Happy Paws Pet Adoption</p>
     </footer>
 
-<script>
-  const photos = [
-    "images/pet1.jpg",
-    "images/pet2.jpg",
-    "images/pet3.jpg",
-    "images/pet4.jpg",
-    "images/pet5.jpg",
-    "images/pet6.jpg",
-    "images/pet7.jpg",
-    "images/pet8.jpg",
-    "images/pet9.jpg",
-    "images/pet10.jpg",
-  ];
-
-  // Text arrays required by the assignment
-  const captionTexts = [
-    "Buddy",
-    "Luna",
-    "Max",
-    "Bella",
-    "Rocky",
-    "Milo",
-    "Daisy",
-    "Charlie",
-    "Coco",
-    "Oscar",
-  ];
-
-  const descTexts = [
-    "Friendly and loves belly rubs.",
-    "Calm, gentle, and great with kids.",
-    "Playful pup who enjoys long walks.",
-    "Sweet and curious, learning fast.",
-    "Loyal companion who loves treats.",
-    "Energetic and always ready to play.",
-    "Shy at first, then super cuddly.",
-    "Smart and loves training games.",
-    "Goofy personality and very social.",
-    "Independent but super affectionate.",
-  ];
-
-  // Tag helpers mentioned in the PDF
-  const openCaptionTag = '<p class="caption">';
-  const closeCaptionTag = "</p>";
-  const openDescTag = '<div class="description">';
-  const closeDescTag = "</div>";
-
-  const galleryEl = document.getElementById("gallery");
-
-  for (let i = 0; i < photos.length; i++) {
-    // Change from class="photo" to id="photo1", "photo2", ...
-    const li = document.createElement("li");
-    li.id = `photo${i + 1}`;
-
-    const img = document.createElement("img");
-    img.className = "photo";
-    img.src = photos[i];
-    img.alt = `${captionTexts[i]} - pet photo`;
-
-    // Caption (always visible)
-    const captionWrap = document.createElement("div");
-    captionWrap.innerHTML = openCaptionTag + captionTexts[i] + closeCaptionTag;
-
-    // Description (hidden until hover)
-    const descWrap = document.createElement("div");
-    descWrap.innerHTML = openDescTag + descTexts[i] + closeDescTag;
-
-    li.appendChild(img);
-    li.appendChild(captionWrap);
-    li.appendChild(descWrap);
-
-    galleryEl.appendChild(li);
-  }
-</script>
+    <!-- External JS (required by assignment) -->
+    <script src="gallery.js"></script>
   </body>
 </html>
