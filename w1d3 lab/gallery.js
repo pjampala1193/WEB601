@@ -38,14 +38,56 @@ const descTexts = [
   "Independent but super affectionate.",
 ];
 
+// NEW: array for the text information (required by PDF)
+const infoTexts = [
+  "Buddy is a confident little explorer who loves people and enjoys cuddle time after play.",
+  "Luna is gentle and calm, perfect for a quiet home and great with kids and visitors.",
+  "Max is energetic and loves walks, games, and learning simple tricks for treats.",
+  "Bella is curious and sweet, and she warms up fast once she feels safe and loved.",
+  "Rocky is loyal and food-motivated, making him a fun buddy for training and hikes.",
+  "Milo is always ready to play and would do great in a home that enjoys activity.",
+  "Daisy starts shy, but once she trusts you she turns into a total cuddle bug.",
+  "Charlie is smart and alert, and he enjoys puzzle toys and training games.",
+  "Coco is goofy and social, always happy to be around people and other pets.",
+  "Oscar is independent but affectionate, the type that checks in for pets and love.",
+];
+
 // Tag helpers mentioned in the PDF
 const openCaptionTag = '<p class="caption">';
 const closeCaptionTag = "</p>";
 const openDescTag = '<div class="description">';
 const closeDescTag = "</div>";
 
+// NEW: variable for the text to close info box (required by PDF)
+const closeInfoText = "Click This To Close";
+
 const galleryEl = document.getElementById("gallery");
 
+// Info box elements
+const infoBox = document.getElementById("infoBox");
+const infoHeading = document.getElementById("infoHeading");
+const infoText = document.getElementById("infoText");
+const infoClose = document.getElementById("infoClose");
+infoClose.textContent = closeInfoText;
+
+// Helpers
+function showInfoBox(index) {
+  infoHeading.innerHTML = captionTexts[index]; 
+  infoText.innerHTML = infoTexts[index];       
+  infoBox.style.visibility = "visible";       
+}
+
+function hideInfoBox() {
+  infoBox.style.visibility = "hidden";
+}
+
+// Close link click
+infoClose.addEventListener("click", (e) => {
+  e.preventDefault();
+  hideInfoBox();
+});
+
+// Build gallery
 for (let i = 0; i < photos.length; i++) {
   const li = document.createElement("li");
   li.id = `photo${i + 1}`;
@@ -59,13 +101,16 @@ for (let i = 0; i < photos.length; i++) {
   const captionWrap = document.createElement("div");
   captionWrap.innerHTML = openCaptionTag + captionTexts[i] + closeCaptionTag;
 
-  // Description (hidden until hover - your CSS controls this)
+  // Description (clickable)
   const descWrap = document.createElement("div");
   descWrap.innerHTML = openDescTag + descTexts[i] + closeDescTag;
 
   li.appendChild(img);
   li.appendChild(captionWrap);
   li.appendChild(descWrap);
-
   galleryEl.appendChild(li);
+
+  // Add click listener to the actual .description element we just created
+  const descBar = li.querySelector(".description"); 
+  descBar.addEventListener("click", () => showInfoBox(i)); 
 }

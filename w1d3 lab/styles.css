@@ -353,3 +353,9 @@ small{
 .info-close:hover {
   text-decoration: underline;
 }
+
+
+/* Make description bar look clickable */
+.description {
+  cursor: pointer;
+}
