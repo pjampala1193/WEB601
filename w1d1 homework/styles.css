@@ -29,7 +29,6 @@ header {
 }
 
 #contact header {
-  /* Using YOUR filename from the screenshot: Cliff_rock.jpg */
   background: no-repeat lightgrey url("images/Cliff_rock.jpg");
   background-size: 1500px;
 }
@@ -280,7 +279,6 @@ footer {
   padding: 6px;
 }
 
-/* First column (sub-headings) */
 #activities th:first-child {
   width: 125px;
   background: #4977D1;
@@ -311,7 +309,6 @@ footer {
   width: 70px;
 }
 
-/* Form layout */
 #contact form {
   width: 700px;
   margin: 1.5em auto 0 auto;
@@ -380,7 +377,7 @@ footer {
   width: 200px;
   padding: 12px 18px;
   border: none;
-  background: #4977D1;
+  /* background: #4977D1; */  /* REQUIRED: disabled button visual */
   color: #fff;
   font-weight: bold;
   cursor: pointer;
@@ -408,4 +405,3 @@ footer {
   color: #125688;
   font-weight: bold;
 }
-
