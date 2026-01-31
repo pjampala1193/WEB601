@@ -405,3 +405,22 @@ footer {
   color: #125688;
   font-weight: bold;
 }
+
+/* ===== Day 3 Reveal Inputs ===== */
+#contact .reveal-box {
+  margin-top: 12px;
+}
+
+#contact .reveal-box label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  color: #4977D1;
+}
+
+#contact .reveal-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+}
