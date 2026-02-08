@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Westcliff Fullstack Bootcamp jQuery Ajax Example</title>
+      <meta charset="utf-8" />
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      <script>
+         $(document).ready(function () {
+
+            // Create the output area ONE time when page loads
+            $("body").append(`
+               <div id="showinfo">
+                  <p id="pName"></p>
+                  <p id="pAge"></p>
+                  <p id="pSex"></p>
+               </div>
+            `);
+
+            // Optional: hide the box until button is clicked
+            $("#showinfo").hide();
+
+            $("#btn").click(function () {
+               // Show the output box
+               $("#showinfo").show();
+
+               // Clear old text (so clicking again doesn't duplicate text)
+               $("#pName, #pAge, #pSex").text("");
+
+               // Load JSON (IMPORTANT: no leading slash)
+               $.getJSON("jq/result.json", function (jqdata) {
+                  $("#pName").text("NAME: " + jqdata.name);
+                  $("#pAge").text("AGE: " + jqdata.age);
+                  $("#pSex").text("SEX: " + jqdata.sex);
+               }).fail(function () {
+                  $("#pName").text("Could not load jq/result.json");
+               });
+            });
+         });
+      </script>
+
+      <style>
+         #showinfo {
+            background-color: #eee;
+            padding: 12px;
+            margin-top: 12px;
+            width: fit-content;
+         }
+      </style>
+   </head>
+
+   <body>
+      <p>Click button to load result.json file</p>
+      <input type="button" id="btn" value="Load Data" />
+   </body>
+</html>
