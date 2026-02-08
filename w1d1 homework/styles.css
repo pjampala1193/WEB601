@@ -290,6 +290,17 @@ footer {
   background: #BDE1FF;
 }
 
+/* ===== Day 1 Homework: Activities table interaction ===== */
+#activities td.selectable {
+  cursor: pointer; /* hand cursor */
+}
+
+#activities td.selected {
+  background: #9ed034; /* highlight */
+  color: #fff;
+  font-weight: bold;
+}
+
 /* =========================
    CONTACT: styling (Day 2)
 ========================= */
