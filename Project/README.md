@@ -1,7 +1,14 @@
-# Splashes Website
+# Splashes Website (Project)
 
-Children swimming lesson website built using:
-HTML5, CSS3, Bootstrap 4, JavaScript, jQuery, Ajax, Vue.js
+Tech used:
+- HTML5, CSS3, JavaScript
+- Bootstrap 4
+- jQuery + Ajax
+- Vue.js
 
-This is the initial project structure commit.
-Mockup-based styling and content will be added next.
+Pages included:
+- Home (index.html)
+- About (about.html)
+- Programs (programs.html)
+- Locations (schedule.html)
+- Contact (contact.html)

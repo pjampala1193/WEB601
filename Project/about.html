@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Splashes | About</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Page: About -->
+  <header class="site-header">
+    <nav class="navbar splashes-nav navbar-expand-xl">
+      <a class="navbar-brand brand" href="index.html">
+        <img src="assets/images/logo.png" alt="Splashes logo">
+        <h1 class="brand-title">Splashes</h1>
+      </a>
+
+      <button class="navbar-toggler" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
+        <span class="hamburger-lines"><span></span><span></span><span></span></span>
+      </button>
+
+      <div class="collapse navbar-collapse d-none d-xl-flex">
+        <ul class="navbar-nav ml-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="programs.html">Swim Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="schedule.html">Locations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item ml-3">
+            <a class="btn-register" href="#" data-toggle="modal" data-target="#signInModal">Register / Sign In</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mobile-panel" data-mobile-panel>
+      <a href="about.html">About</a>
+      <a href="programs.html">Swim Programs</a>
+      <a href="schedule.html">Locations</a>
+      <a href="contact.html">Contact Us</a>
+      <button class="mobile-register" type="button" data-toggle="modal" data-target="#signInModal">Register / Sign In</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero about-hero">
+      <div class="hero-inner">
+        <h2 class="hero-title">About Splashes</h2>
+      </div>
+    </section>
+
+    <section class="faded-block">
+      <div class="container">
+        <h3 class="section-title">Our Philosophy</h3>
+        <p class="section-text mt-2">
+          Our mission is to educate and motivate individuals to be safer and learn proper swimming technique.
+        </p>
+        <p class="section-text mt-3">
+          We have chosen to share our love of swimming with children and believe there is a swimmer in every child.
+          We pride ourselves on teaching the necessary skills needed to become a comfortable, proficient swimmer right from the beginning.
+        </p>
+      </div>
+    </section>
+
+    <section class="faded-block">
+      <div class="container">
+        <h3 class="section-title">We Do A Pretty Good Job</h3>
+        <p class="section-text mt-2">
+          Experience excellence through Splashes’ award-winning programs where safety, fast progress, and a fun environment come first.
+          Join the swim school that loves what they do and it shows.
+        </p>
+        <div class="text-center mt-3">
+          <a href="#">Hear What Families Are Saying About Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="awards">
+      <div class="container">
+        <h3 class="section-title">Awards We’ve Won</h3>
+        <div class="awards-row">
+          <img src="assets/images/award-1.png" alt="Award 1 (placeholder)">
+          <img src="assets/images/award-2.png" alt="Award 2 (placeholder)">
+          <img src="assets/images/award-3.png" alt="Award 3 (placeholder)">
+          <img src="assets/images/award-4.png" alt="Award 4 (placeholder)">
+          <img src="assets/images/award-5.png" alt="Award 5 (placeholder)">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <img class="footer-logo" src="assets/images/footer-logo.png" alt="Splashes footer logo">
+
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="schedule.html">Locations</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" data-toggle="modal" data-target="#signInModal">Register / Sign In</a>
+      </div>
+
+      <div class="footer-phones">
+        <div>Orange County<br><a href="tel:+19494500777">(949) 450-0777</a></div>
+        <div>San Diego County<br><a href="tel:+17606039400">(760) 603-9400</a></div>
+        <div>Los Angeles County<br><a href="tel:+16268361200">(626) 836-1200</a></div>
+        <div>Northern California<br><a href="tel:+14082791700">(408) 279-1700</a></div>
+        <div>Denver<br><a href="tel:+17203447700">(720) 344-7700</a></div>
+      </div>
+
+      <div class="footer-copy mt-3">© 2022 Splashes.<br>All Rights Reserved</div>
+    </div>
+  </footer>
+
+  <!-- Sign In Modal (same as Home) -->
+  <div class="modal fade modal-splashes" id="signInModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content p-4">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">SIGN IN</h5>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label>Password *</label>
+              <input type="password" class="form-control" required>
+            </div>
+
+            <div class="forgot"><a href="#">Forgot Password?</a></div>
+
+            <div class="btn-row">
+              <button type="submit" class="btn-signin">Sign In</button>
+              <button type="button" class="btn-signup">Sign Up</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
