@@ -1,0 +1,134 @@
+/* ===== Base layout ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Header (responsive background image) ===== */
+header {
+  background: url("images/central_park.jpg") 0 -200px no-repeat;
+  background-size: 1500px;
+  height: 400px;
+  padding-top: 100px;
+  padding-left: 100px;
+
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 60px;
+  color: #fff;
+}
+
+/* Make header background responsive (mobile) */
+@media (max-width: 599px) {
+  header {
+    background-position: center;
+    background-size: cover;     /* key for responsiveness */
+    height: 260px;
+    padding: 60px 20px;
+    font-size: 36px;
+  }
+}
+
+/* Optional: nicer look on larger screens */
+@media (min-width: 600px) {
+  header {
+    background-size: cover;     /* keeps it responsive for desktop too */
+    background-position: center;
+  }
+}
+
+/* ===== Nav ===== */
+nav {
+  background-color: rgb(255, 245, 238);
+  height: 50px;
+  text-align: center;
+  padding-top: 2px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+  padding: 0 20px;
+}
+
+li a {
+  text-decoration: none;
+}
+
+li a:link {
+  color: #000;
+}
+
+li a:visited {
+  color: #818db3;
+}
+
+li a:hover {
+  color: #333;
+}
+
+li a:active {
+  color: #753a30;
+}
+
+/* ===== Main ===== */
+main {
+  margin: 50px;
+}
+
+main h1 {
+  color: rgb(129, 141, 179);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* image responsive */
+main img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Footer ===== */
+footer {
+  height: 40px;
+  background-color: rgb(129, 141, 179);
+  text-align: center;
+  padding-top: 20px;
+  color: rgb(211, 218, 240);
+}
+
+/* ===== Responsive main area grid ===== */
+/* Default (< 600px): stack (1 column) */
+.cards {
+  max-width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;   /* stack */
+  gap: 0.5rem;
+}
+
+.card {
+  padding: 1rem;
+}
+
+/* 600px and up: 2 columns */
+@media (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+}
