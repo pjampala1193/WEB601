@@ -6,115 +6,71 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #fff;
-}
-
-/* =========================
-   Header (RESPONSIVE backgrounds on ALL pages)
-========================= */
-header {
-  width: 100%;
-  min-height: 400px;
-  padding-top: 3em;
-
-  /* make ALL header background images responsive */
+  background-color: #fff;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: top center;
+  /* PDF wants background image moved to BODY and sized like this */
+  background-size: 100% 400px;
 }
 
-/* page-specific header images */
-#home header {
+/* Backgrounds by page (body id) */
+#home {
   background-image: url("images/cliff_ocean.jpg");
 }
 
-#activities header {
-  background-image: url("images/runfly.jpg");
-}
-
-#contact header {
-  background-image: url("images/Cliff_rock.jpg");
-}
-
-#cliffs header {
+#cliffs {
   background-image: url("images/forest_cliff.jpg");
 }
 
-/* =========================
-   Logo + Nav container (RESPONSIVE)
-========================= */
-.main-header {
-  background-color: rgba(255, 255, 255, 0.8);
-  max-width: 900px;
-  width: 95%;
-  margin: 2em auto 0 auto;
-  min-height: 100px;
-  padding: 0 1em;
-
-  display: flex;
-  align-items: center;
-  gap: 1em;
+#activities {
+  background-image: url("images/runfly.jpg");
 }
 
-.logo img {
-  width: 100px;
-  height: 100px;
-  display: block;
+#contact {
+  background-image: url("images/Cliff_rock.jpg");
+}
+
+/* Header stays EMPTY so navbar can stick outside it */
+header {
+  width: 100%;
+  min-height: 275px; /* PDF header rule */
 }
 
 /* =========================
-   Navigation (RESPONSIVE)
+   Sticky Bootstrap Navbar tweaks (PDF)
 ========================= */
-.main-menu {
-  flex: 1;
+.navbar-gc {
+  background-color: rgba(38, 41, 61, 0.7); /* PDF navbar bg */
 }
 
-.main-menu ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.main-menu ul li {
-  list-style-type: none;
-  padding: 0 18px;
-  border-left: 1px solid rgba(202, 204, 202, 0.6);
-  line-height: 100px;
+.navbar-gc .navbar-nav .nav-link {
+  color: rgb(255, 255, 255) !important; /* PDF link color */
   text-transform: uppercase;
   font-size: 14px;
+  font-weight: 600;
 }
 
-.main-menu ul li:first-child {
-  border-left: none;
+.navbar-gc .navbar-nav .nav-link:hover {
+  opacity: 0.85;
 }
 
-.main-menu ul li a {
-  text-decoration: none;
-  color: #888;
-}
-
-.main-menu ul li a:hover {
-  color: #9ed034;
-}
-
-.main-menu ul li.active {
+.navbar-gc .navbar-nav .nav-item.active .nav-link {
   background: #9ed034;
-  border: none;
+  border-radius: 4px;
+  color: #fff !important;
 }
 
-.main-menu ul li.active a {
-  color: #fff;
+/* Add a little spacing so active highlight looks nice */
+.navbar-gc .navbar-nav .nav-link {
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 /* =========================
-   Main content (RESPONSIVE)
+   Main content
 ========================= */
 main {
-  max-width: 1200px;
-  width: 92%;
+  width: 1200px;
   margin: 0 auto;
   padding: 2em 0;
 }
@@ -169,31 +125,27 @@ main p {
 }
 
 /* =========================
-   Partners
+   Partners section background
 ========================= */
 section {
   width: 100%;
   background-color: #4288C3;
-}
-
-#partners {
-  max-width: 1200px;
-  width: 92%;
   padding: 2em 0;
-  margin: 0 auto;
-  text-align: center;
 }
 
-#partners .partner {
-  display: inline-block;
-  margin: 0 0.75em;
-  padding: 1.3em 1.5em;
+/* Partner bubble style stays the same, but now JS will generate Bootstrap columns */
+.partner-bubble {
   background-color: #fff;
   border-radius: 50%;
-  vertical-align: middle;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#partners .partner img {
+.partner-bubble img {
   width: 90px;
   height: 90px;
 }
@@ -210,8 +162,7 @@ footer {
 }
 
 #nondisclaimer {
-  max-width: 1200px;
-  width: 92%;
+  width: 1200px;
   margin: 0 auto;
   padding-top: 1em;
 }
@@ -256,15 +207,14 @@ footer {
 .fa-instagram { background: #125688; }
 
 /* =========================
-   ACTIVITIES: Table styling
-   (Bootstrap will handle responsiveness with .table-responsive)
+   ACTIVITIES: Table styling (your existing)
 ========================= */
 #activities table {
-  width: 100%;
+  width: 1000px;
+  margin: 4em auto 0 auto;
   border-collapse: collapse;
 }
 
-/* Keep your original colors */
 #activities caption {
   background: #852b1b;
   height: 40px;
@@ -285,16 +235,17 @@ footer {
 
 #activities th,
 #activities td {
+  width: 225px;
+  height: 75px;
   vertical-align: middle;
   border: solid 1px #852b1b;
-  padding: 10px;
-  min-width: 160px; /* helps horizontal scroll on small screens */
+  padding: 6px;
 }
 
 #activities th:first-child {
+  width: 125px;
   background: #4977D1;
   color: #fff;
-  min-width: 140px;
 }
 
 #activities td:first-child {
@@ -302,11 +253,7 @@ footer {
   background: #BDE1FF;
 }
 
-/* Table interaction */
-#activities td.selectable {
-  cursor: pointer;
-}
-
+#activities td.selectable { cursor: pointer; }
 #activities td.selected {
   background: #9ed034;
   color: #fff;
@@ -314,7 +261,7 @@ footer {
 }
 
 /* =========================
-   CONTACT: responsive form styling
+   CONTACT (your existing)
 ========================= */
 #contact .contactinfo {
   margin: 1em 0 1.5em 0;
@@ -332,10 +279,8 @@ footer {
   width: 70px;
 }
 
-/* Let Bootstrap handle most form sizing */
 #contact form {
-  width: 100%;
-  max-width: 720px;
+  width: 700px;
   margin: 1.5em auto 0 auto;
 }
 
@@ -348,11 +293,6 @@ footer {
   color: #4977D1;
   font-weight: bold;
   padding: 0 0.5em;
-}
-
-/* Keep your reveal box spacing */
-#contact .reveal-box {
-  margin-top: 12px;
 }
 
 /* ===== HOME (Digital Clock Bar) ===== */
@@ -373,25 +313,8 @@ footer {
   font-weight: bold;
 }
 
-/* =========================
-   Small screen tweaks
-========================= */
-@media (max-width: 768px) {
-  header { min-height: 320px; padding-top: 1.5em; }
-
-  .main-header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.75em 1em;
-  }
-
-  .main-menu ul li {
-    line-height: 40px;
-    padding: 0 12px;
-    border-left: none;
-  }
-
-  footer { height: auto; padding-bottom: 3em; }
-  #copyright, #social { float: none; text-align: center; }
-  #social { margin-top: 10px; }
+/* Simple responsiveness so main doesn't overflow on small screens */
+@media (max-width: 1250px) {
+  main { width: 92%; }
+  #nondisclaimer { width: 92%; }
 }
