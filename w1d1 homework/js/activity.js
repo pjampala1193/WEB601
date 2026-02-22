@@ -1,8 +1,12 @@
 $(document).ready(function () {
   const $table = $("#activities table");
   const $cells = $("#activities table tbody td");
-  const $displayBox = $("#displaySelected");
-  const $result = $("#result");
+
+  const $modal = $("#activityModal");
+  const $list = $("#selectedList");
+
+  // Store selected items by key
+  const selectedMap = new Map(); // key -> { activity, cliffName }
 
   // Mark selectable cells (skip first column + skip "Not Available")
   $cells.each(function () {
@@ -18,42 +22,94 @@ $(document).ready(function () {
     $td.addClass("selectable");
   });
 
+  function renderList() {
+    $list.empty();
+
+    if (selectedMap.size === 0) {
+      // If nothing selected, close the modal (if open)
+      $modal.modal("hide");
+      return;
+    }
+
+    // Build list items
+    for (const [key, val] of selectedMap.entries()) {
+      const line = `${val.activity} at ${val.cliffName}`;
+
+      const $li = $(`
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>${line}</span>
+          <button type="button" class="btn btn-sm btn-outline-danger" data-key="${key}">Remove</button>
+        </li>
+      `);
+
+      $list.append($li);
+    }
+  }
+
+  function openModalIfNeeded() {
+    if (selectedMap.size > 0) {
+      $modal.modal("show");
+    }
+  }
+
   // Click handler for selectable cells
   $table.on("click", "td.selectable", function () {
     const $td = $(this);
     const activity = $td.text().trim();
 
-    // Column index in the row (0 = Activity, 1 = West Cliff, etc.)
     const colIndex = $td.index();
-
-    // Get the cliff name from the table header using column index
     const cliffName = $table.find("thead th").eq(colIndex).text().trim();
 
-    // Build a unique id so we can remove the exact line later
     const key = "sel-" + colIndex + "-" + activity.replace(/\s+/g, "-").toLowerCase();
 
-    // Toggle highlight class (your existing behavior)
+    // Toggle highlight
     $td.toggleClass("selected");
 
     if ($td.hasClass("selected")) {
-      // Make the display box visible
-      $displayBox.css("visibility", "visible");
-      $displayBox.css("margin-top", "2em");
-
-      // Add the selected activity line (with cliff name)
-      // Example: "Bike Meetup Group at East Cliff"
-      $result.append(
-        `<p data-key="${key}">${activity} at ${cliffName}</p>`
-      );
+      selectedMap.set(key, { activity, cliffName });
+      renderList();
+      openModalIfNeeded();
     } else {
-      // Remove the matching line
-      $result.find(`p[data-key="${key}"]`).remove();
-
-      // If no selections left, hide the display box again
-      if ($result.find("p").length === 0) {
-        $displayBox.css("visibility", "hidden");
-        $displayBox.css("margin-top", "0");
-      }
+      selectedMap.delete(key);
+      renderList();
     }
+  });
+
+  // Remove button inside modal
+  $list.on("click", "button[data-key]", function () {
+    const key = $(this).attr("data-key");
+
+    // Remove from map
+    selectedMap.delete(key);
+
+    // Un-highlight the matching cell in the table too
+    // key format: sel-<colIndex>-<activity-slug>
+    // We can find the cell by matching its column + text
+    const parts = key.split("-");
+    const colIndex = parseInt(parts[1], 10);
+
+    // Rebuild the activity text from the cell search:
+    // We'll simply scan that column for selected cells and match by slug
+    const slug = parts.slice(2).join("-");
+
+    $table.find("tbody tr").each(function () {
+      const $row = $(this);
+      const $td = $row.find("td").eq(colIndex);
+      if (!$td.length) return;
+
+      const tdSlug = $td.text().trim().replace(/\s+/g, "-").toLowerCase();
+      if (tdSlug === slug) {
+        $td.removeClass("selected");
+      }
+    });
+
+    renderList();
+  });
+
+  // Optional: "Get Info" button (kept simple for homework)
+  $("#getInfoBtn").on("click", function () {
+    // You can extend this later if your homework asks for sending/emailing.
+    // For now, just close the modal.
+    $modal.modal("hide");
   });
 });
