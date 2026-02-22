@@ -1,0 +1,140 @@
+/* Header */
+header {
+  width: 100%;
+  min-height: 400px;
+  padding-top: 3em;
+}
+
+#home header {
+  background: no-repeat lightgrey url(images/cliff_ocean.jpg);
+  background-size: 1500px;
+}
+
+/* This box holds the navbar + logo */
+.main-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 2em auto 0 auto;
+  min-height: 100px;
+  padding: 0.5em 1em;
+}
+
+/* Logo image */
+.site-logo {
+  width: 100px;
+  height: 100px;
+}
+
+/* Navbar styling */
+.navbar-nav .nav-link {
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #9ed034;
+}
+
+/* active tab (Bootstrap adds .active on li) */
+.navbar-nav .active > .nav-link {
+  background: #9ed034;
+  color: #fff !important;
+  border-radius: 3px;
+}
+
+/* Make the menu look nice in collapsed mode */
+@media (max-width: 1199.98px) {
+  .navbar-nav {
+    padding-top: 0.5em;
+  }
+  .navbar-nav .nav-link {
+    padding: 0.75em 0.5em;
+    border-top: 1px solid rgba(202, 204, 202, 0.6);
+  }
+  .navbar-nav .active > .nav-link {
+    display: inline-block;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    margin-top: 0.25em;
+  }
+}
+
+/* Main */
+main {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main h1 {
+  font-size: 2.5em;
+  padding-bottom: 0.5em;
+  color: #9ed034;
+}
+
+main h2 {
+  font-size: 1.7em;
+}
+
+/* Partners */
+.partners-section {
+  width: 100%;
+  background-color: #4288c3;
+}
+
+.partner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.3em 1.5em;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.partner img {
+  width: 90px;
+  height: 90px;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #ecfab8;
+}
+
+footer #nondisclaimer .copy {
+  font-size: 0.9em;
+}
+
+footer #disclaimer p {
+  font-size: 0.85em;
+  text-align: center;
+}
+
+footer #nondisclaimer .social .fa {
+  padding: 15px;
+  font-size: 15px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 4px;
+  border-radius: 50%;
+}
+
+footer #nondisclaimer .social .fa:hover {
+  opacity: 0.7;
+}
+
+footer #nondisclaimer .social .fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+footer #nondisclaimer .social .fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+footer #nondisclaimer .social .fa-instagram {
+  background: #125688;
+  color: white;
+}
