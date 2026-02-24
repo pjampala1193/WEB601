@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>VUE Demo - Global Component</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="component1">
+  <mycomponent1></mycomponent1>
+</div>
+
+<script>
+Vue.component('mycomponent1',{
+  template: '<div><h1>Welcome to VUE Components!</h1></div>'
+});
+
+new Vue({
+  el: '#component1'
+});
+</script>
+
+</body>
+</html>
