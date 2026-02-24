@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Food Blog</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap 4 -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- NAVIGATION (Vue local component) -->
+    <site-nav></site-nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container mt-4">
+      <div class="row">
+
+        <!-- LEFT COLUMN -->
+        <div class="col-md-4 text-center">
+          <!-- Vue-bound image -->
+          <img
+            :src="image.src"
+            :alt="image.alt"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="col-md-8">
+          <h2 class="comments-title">Comments</h2>
+
+          <div
+            class="card mb-3"
+            v-for="(post, index) in posts"
+            :key="index"
+          >
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ post.author }}
+                <small class="text-muted">
+                  — {{ post.date }} @ {{ post.time }}
+                </small>
+              </h5>
+              <p class="card-text">{{ post.text }}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom Vue Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>
