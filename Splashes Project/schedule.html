@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splashes | Schedule</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- jQuery UI CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- Header / Nav -->
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar d-flex align-items-center" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img src="assets/images/shark-full.png" alt="Splashes logo">
+        <span class="brand-name">Splashes</span>
+      </a>
+
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open menu">Menu</button>
+
+      <ul class="nav-links" data-nav-links>
+          <li><a class="" href="about.html">About</a></li>
+          <li><a class="" href="swimlessons.html">Swimming Lessons</a></li>
+          <li><a class="" href="swimprograms.html">Swim Programs</a></li>
+          <li><a class="" href="adultprograms.html">Adult Programs</a></li>
+          <li><a class="" href="locations.html">Locations</a></li>
+          <li><a class="" href="contact.html">Contact Us</a></li>
+          <li><a class="active" href="schedule.html">Schedule</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a class="btn-pill btn btn-light btn-sm" href="signin.html">Register / Sign In</a>
+      </div>
+    </nav>
+
+    <div data-nav-menu data-open="false" style="display:none; padding: 10px 0 16px;">
+      <div style="display:flex; flex-direction:column; gap:10px; padding-bottom:10px;">
+        <a style="color:#fff; text-decoration:none; font-weight:700;" href="about.html">About</a>
+        <a style="color:#fff; text-decoration:none; font-weight:700;" href="swimlessons.html">Swimming Lessons</a>
+        <a style="color:#fff; text-decoration:none; font-weight:700;" href="swimprograms.html">Swim Programs</a>
+        <a style="color:#fff; text-decoration:none; font-weight:700;" href="adultprograms.html">Adult Programs</a>
+        <a style="color:#fff; text-decoration:none; font-weight:700;" href="locations.html">Locations</a>
+        <a style="color:#fff; text-decoration:none; font-weight:700;" href="contact.html">Contact Us</a>
+        <a style="color:#fff; text-decoration:none; font-weight:700;" href="schedule.html">Schedule</a>
+        <a style="color:#fff; text-decoration:none; font-weight:700;" href="signin.html">Register / Sign In</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <!-- Simple heading section (no mockup conflict) -->
+  <section class="content">
+    <div class="content-inner">
+      <!-- Requirement #2: HTML Comments evidence -->
+      <!-- Schedule Table -->
+      <h2>Class Schedule</h2>
+      <p style="text-align:center;">Sample schedule table (meets the HTML table requirement).</p>
+
+      <div class="table-wrap">
+        <table class="schedule-table table table-striped">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Time</th>
+              <th>Program</th>
+              <th>Age Group</th>
+              <th>Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Mon</td><td>4:00 PM</td><td>Swim Lessons</td><td>3–5</td><td>Beginner</td></tr>
+            <tr><td>Tue</td><td>5:00 PM</td><td>Swim Lessons</td><td>6–12</td><td>Intermediate</td></tr>
+            <tr><td>Wed</td><td>6:00 PM</td><td>Adult Programs</td><td>13+</td><td>Lap Swim</td></tr>
+            <tr><td>Thu</td><td>4:30 PM</td><td>Swim Programs</td><td>6–12</td><td>Advanced</td></tr>
+            <tr><td>Sat</td><td>10:00 AM</td><td>Parent &amp; Me</td><td>0–3</td><td>Intro</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Requirement #7: jQuery UI Accordion component -->
+      <h2 style="margin-top:34px;">FAQs</h2>
+      <div id="faqAccordion">
+        <h3>How do I register?</h3>
+        <div><p>Use the “Register / Sign In” button in the top navigation to get started.</p></div>
+
+        <h3>Do you offer beginner classes?</h3>
+        <div><p>Yes. We group students by age and ability, and beginners start with fundamentals.</p></div>
+
+        <h3>Can adults take lessons?</h3>
+        <div><p>Yes, check “Adult Programs” for lap swimming and adult options.</p></div>
+      </div>
+
+      <!-- Requirement #7: Ajax feature -->
+      <h2 style="margin-top:34px;">Locations (Loaded with Ajax)</h2>
+      <p style="text-align:center;">This section loads location data using jQuery Ajax.</p>
+      <div id="ajaxLocations"></div>
+
+    </div>
+  </section>
+</main>
+
+<!-- Footer (same as other pages) -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="assets/images/footer-logo-wave-small.png" alt="Splashes">
+    </div>
+  </div>
+
+  <div class="footer-links-row">
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="locations.html">Locations</a>
+      <a href="#">FAQs</a>
+      <a href="contact.html">Contact</a>
+      <a href="signin.html">Register / Sign In</a>
+      <a href="#">Careers</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="copyright">
+      © 2022 Splashes.<br>All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/jquery-features.js"></script>
+<script src="assets/js/vue-widget.js"></script>
+</body>
+</html>

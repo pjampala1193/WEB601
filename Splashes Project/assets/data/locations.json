@@ -1,0 +1,29 @@
+{
+  "regions": [
+    {
+      "name": "Orange County",
+      "phone": "(949) 450-0777",
+      "locations": ["Irvine", "Huntington Beach", "Mission Viejo"]
+    },
+    {
+      "name": "San Diego County",
+      "phone": "(760) 603-9400",
+      "locations": ["Carlsbad", "San Marcos", "Poway"]
+    },
+    {
+      "name": "Los Angeles County",
+      "phone": "(626) 836-1200",
+      "locations": ["Pasadena", "Glendale", "Torrance"]
+    },
+    {
+      "name": "Northern California",
+      "phone": "(408) 279-1700",
+      "locations": ["San Jose", "Cupertino", "Santa Clara"]
+    },
+    {
+      "name": "Denver",
+      "phone": "(720) 344-7700",
+      "locations": ["Centennial", "Aurora", "Highlands Ranch"]
+    }
+  ]
+}
